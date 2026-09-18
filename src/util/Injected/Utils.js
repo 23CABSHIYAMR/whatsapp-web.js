@@ -482,7 +482,7 @@ exports.LoadUtils = () => {
             ...botOptions,
             ...extraOptions,
         };
-
+        delete message.__x_id;
         // Bot's won't reply if canonicalUrl is set (linking)
         if (botOptions) {
             delete message.canonicalUrl;
